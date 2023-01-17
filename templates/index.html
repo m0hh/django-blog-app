@@ -3,16 +3,20 @@
 {% block body %}
 
 <div class="jumbotron text-center">
-        <h3>Yazılım Bilimi Bloğuna Hoşgeldiniz</h3>
-        <p>Bu blogta geliştiriciler olarak blog yazılarınızı paylaşabilirsiniz ve insanlara yardımcı olabilirsiniz.</p>
+        <h3>Welcome to medicine in  turkey </h3>
+        <p>Email: example@email.com</p>
+        <p>Whatsapp: 01001426668</p>
+        <a href="https://facebook.com">Facebook</a>
+        <p></p>
+        <a  href="{% url 'article:articles'  %}">Articles</a>
 </div>
 
 
 <p>
         {% if request.user.is_authenticated %}
-                Giriş Yapılmış, {{request.user.username}}
+                Signed In, {{request.user.username}}
         {% else %}
-                Giriş Yapılmamış
+                Not Signed In
         {% endif %}
 
 </p>
